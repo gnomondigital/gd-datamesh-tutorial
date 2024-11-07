@@ -8,6 +8,10 @@ This project follows a layered architecture with Bronze, Silver, and Gold layers
 - **Silver Layer**: Data cleaning, transformation, and enrichment.
 - **Gold Layer**: Aggregated and refined data ready for analysis and reporting.
 
+### Additional Resources
+
+For more details, you can read our [Medium article](https://medium.com/gnomondigital/part-1-4-build-etl-pipelines-of-data-domain-with-medallion-architecture-a14b983866a1).
+
 ### Prerequisites
 
 Ensure you have the following installed:
@@ -92,4 +96,6 @@ This project is created and maintained by Gnomon Digital.
 
 ### Acknowledgements
 
+
 Special thanks to all contributors and the open-source community for their invaluable support and contributions.
+

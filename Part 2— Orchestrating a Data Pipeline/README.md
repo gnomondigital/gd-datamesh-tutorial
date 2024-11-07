@@ -2,6 +2,8 @@
 
 This project is an Apache Airflow data pipeline designed to process and analyze NASA data. The project uses Poetry for dependency management and packaging.
 
+For more details, you can read the article on Medium: [Orchestrating a Data Pipeline](https://medium.com/p/c20a615e9b2b).
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
