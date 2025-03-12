@@ -52,13 +52,13 @@ We use Poetry to manage dependencies and packaging, making installation and deve
 ## Understanding Apache Airflow
 Apache Airflow is a powerful orchestration tool that allows for:
 
-Scheduling tasks: Define when data should be fetched, processed, or stored.
+**Scheduling tasks:** Define when data should be fetched, processed, or stored.
 
-Managing dependencies: Tasks run in a defined order, ensuring a logical workflow.
+**Managing dependencies:** Tasks run in a defined order, ensuring a logical workflow.
 
-Monitoring workflows: The Airflow UI helps visualize DAG execution, detect failures, and retry tasks when needed.
+**Monitoring workflows:** The Airflow UI helps visualize DAG execution, detect failures, and retry tasks when needed.
 
-Extensibility: Connectors for databases, APIs, and cloud services make integration easy.
+**Extensibility:** Connectors for databases, APIs, and cloud services make integration easy.
 
 In this project, Airflow is used to automate the data pipeline for NASA power data, ensuring regular and reliable data processing.
 

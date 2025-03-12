@@ -1,3 +1,12 @@
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Creating a Pipeline](#creating-a-pipeline)
+3. [Orchestrating with Airflow](#orchestrating-with-airflow)
+4. [Creating an API](#creating-an-api)
+5. [Deploying with GCP](#deploying-with-gcp)
+6. [Connect with Us](#connect-with-us)
+
 # gd-datamesh-tutorial
 
 Welcome to the Data Mesh Tutorial project! This repository contains a comprehensive guide to implementing a data mesh architecture. The tutorial is divided into four main parts:
@@ -7,15 +16,6 @@ Welcome to the Data Mesh Tutorial project! This repository contains a comprehens
 3. **Creating an API**
 4. **Deploying with GCP**
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Creating a Pipeline](#creating-a-pipeline)
-- [Orchestrating with Airflow](#orchestrating-with-airflow)
-- [Creating an API](#creating-an-api)
-- [Deploying with GCP](#deploying-with-gcp)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -51,10 +51,8 @@ Finally, we will deploy our data mesh on Google Cloud Platform (GCP). This secti
 
 - Deploying the API and data pipeline
 
-## Contributing
+## Connect with Us
 
-We welcome contributions to this project. Please read our [contributing guidelines](CONTRIBUTING.md) for more information.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+- [LinkedIn](https://www.linkedin.com/company/gnomon-digital)
+- [Medium](https://medium.com/gnomondigital)
+- [Official Website](https://www.gnomondigital.com)
