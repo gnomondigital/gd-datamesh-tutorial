@@ -1,0 +1,25 @@
+stages:
+    - build-push
+  
+variables:
+  REGISTRY_HOSTNAME: gcr.io/gd-gcp-datamesh-qa
+  DOCKER_IMAGE_NAME: ${CI_PROJECT_NAME}
+  
+build-push:
+  stage: build-push
+  tags:
+    - shared
+  image:
+    name: gcr.io/kaniko-project/executor:v1.14.0-debug
+    entrypoint: [""]
+  script:
+    - /kaniko/executor
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+      --destination "$REGISTRY_HOSTNAME/$DOCKER_IMAGE_NAME:$CI_COMMIT_SHORT_SHA"
+      --use-new-run=true
+      --snapshot-mode=redo
+  
+  only:
+    - master
+    - develop

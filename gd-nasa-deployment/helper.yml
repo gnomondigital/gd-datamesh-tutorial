@@ -1,0 +1,54 @@
+.terraform-ver-init: &terraform-ver-init
+  - cd $TF_ROOT
+  - terraform version
+  - terraform init --upgrade=True
+
+.fmt:
+  stage: validate
+  before_script:
+    - *terraform-ver-init
+  script:
+    - terraform fmt
+  allow_failure: true
+
+
+.validate:
+  stage: validate
+  before_script:
+    - *terraform-ver-init
+  script:
+    - terraform validate
+
+
+.plan:
+  stage: plan
+  before_script:
+    - *terraform-ver-init
+    - apk --no-cache add jq
+    - alias convert_report="jq -r '([.resource_changes[]?.change.actions?]|flatten)|{\"create\":(map(select(.==\"create\"))|length),\"update\":(map(select(.==\"update\"))|length),\"delete\":(map(select(.==\"delete\"))|length)}'"
+  script:
+    - terraform plan -out=$TF_PLAN_NAME $REFRESH
+    - terraform show --json $TF_PLAN_NAME | convert_report > $TF_PLAN_JSON
+  artifacts:
+    reports:
+      terraform: ${TF_ROOT}/$TF_PLAN_JSON
+    paths:
+      - ${TF_ROOT}/$TF_PLAN_NAME
+      - ${TF_ROOT}/$TF_PLAN_JSON
+    expire_in: 7 days
+
+.apply:
+  stage: apply
+  before_script:
+    - *terraform-ver-init
+  script:
+    - terraform apply -auto-approve
+  when: manual
+
+.destroy:
+  stage: destroy
+  before_script:
+    - *terraform-ver-init
+  script:
+    - terraform destroy
+  when: manual

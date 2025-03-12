@@ -1,0 +1,15 @@
+{
+    "cSpell.words": [
+        "autoflush",
+        "checkfirst",
+        "healthz",
+        "jsonable",
+        "meteo",
+        "opendata",
+        "psycopg",
+        "pydantic",
+        "sessionmaker",
+        "sqlalchemy",
+        "uvicorn"
+    ]
+}

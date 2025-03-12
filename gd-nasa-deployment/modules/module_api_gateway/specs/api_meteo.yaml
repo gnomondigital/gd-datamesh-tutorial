@@ -1,0 +1,100 @@
+swagger: "2.0"
+info:
+  title: gd-nasa-api
+  description: Open data temperature nasa table
+  version: "0.1.0"
+schemes:
+  - https
+# describes the auth method  used for auth to the api: basic auth, api key, OAuth2
+securityDefinitions:
+  api_key:
+    type: apiKey
+    name: key
+    in: query
+x-google-management:
+  metrics:
+    - name: "meteo-request"
+      displayName: "get meteo bq read quota"
+      valueType: INT64
+      metricKind: DELTA
+  quota:
+    limits:
+      - name: "get-nasa-request-limit"
+        metric: "meteo-request"
+        unit: "1/min/{project}"
+        values:
+          STANDARD: 2
+produces:
+  - application/json
+paths:
+  /:
+    get:
+      tags:
+        - Healthz
+      summary: Health check Endpoint
+      operationId: example_endpoint_healthz_get
+      x-google-backend:
+        address: "${ CLOUD_RUN_URL }/"
+      security:
+        - api_key: []
+      x-google-quota:
+        metricCosts:
+          "meteo-request": 1
+      responses:
+        "200":
+          description: Successful Response
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+  /metadata:
+    get:
+      tags:
+        - Metadata
+      summary: Metadata
+      operationId: get_metadata
+      x-google-backend:
+        address: "${ CLOUD_RUN_URL }/metadata"
+      security:
+        - api_key: []
+      x-google-quota:
+        metricCosts:
+          "meteo-request": 1
+      responses:
+        "200":
+          description: Successful Response
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+  /weatherData:
+    get:
+      tags:
+        - Meteo
+      summary: Reads a row from a dataset in Big Query
+      operationId: getRowById
+      parameters:
+        - in: query
+          name: city_name
+          description: city name
+          required: true
+          type: string
+      x-google-backend:
+        address: "${ CLOUD_RUN_URL }"
+        path_translation: APPEND_PATH_TO_ADDRESS
+        deadline: 300.0
+      security:
+        - api_key: []
+      x-google-quota:
+        metricCosts:
+          "meteo-request": 1
+      responses:
+        "200":
+          description: Successful Response
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
