@@ -1,6 +1,6 @@
-# Data Mesh Project: [Your Project Name Here]
+# Data Mesh: 
 
-This project implements a data mesh architecture to enable decentralized, domain-driven data ownership and access.
+We are going to implement a data mesh architecture to enable decentralized, domain-driven data ownership and access.
 
 ## What is a Data Mesh?
 
@@ -20,7 +20,8 @@ A data mesh is a decentralized architectural paradigm that treats data as a prod
 
 ## My Medium Article
 
-* **Start a project using data mesh** [https://medium.com/gnomondigital/data-mesh-on-gcp-from-operational-data-to-data-product-deployment-173e43e06b68]
+* **Start a project using data mesh** [Data Mesh on GCP— From Operational Data to Data Product Deployment](https://medium.com/gnomondigital/data-mesh-on-gcp-from-operational-data-to-data-product-deployment-173e43e06b68)
+
 
 
 ## Contributing
