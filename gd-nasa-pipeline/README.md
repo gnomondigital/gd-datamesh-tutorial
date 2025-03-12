@@ -1,4 +1,17 @@
 # gd-nasa-pipeline
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Usage](#usage)
+- [Pipeline Stages](#pipeline-stages)
+- [Tables](#tables)
+- [Metadata NASA](#metadata-nasa)
+- [Medium content](#medium-content)
+- [Contributing](#contributing)
+- [Connect with Us](#connect-with-us)
+
 ## Overview
 
 The `gd-nasa-pipeline` is a data processing pipeline designed to handle and analyze the NASA Power dataset. This dataset contains various meteorological and solar parameters that are crucial for understanding weather patterns and solar energy potential.

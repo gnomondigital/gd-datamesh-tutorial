@@ -1,6 +1,17 @@
+## Table of Contents
+
+- [Technology Stack](#technology-stack)
+- [Architecture](#architecture)
+- [Installation](#installation)
+- [Running the API](#running-the-api)
+- [Testing the API](#testing-the-api)
+- [Conclusion](#conclusion)
+- [Connect with Us](#connect-with-us)
+
 ## Technology Stack
 
 This project uses **FastAPI** for building the API, which allows for high performance and easy development. FastAPI is designed to create APIs quickly with minimal code while ensuring high performance, making it a great choice for this project.
+
 
 ## Architecture
 
