@@ -12,7 +12,7 @@ def test_silver_layer():
 
     output = migrate_table_to_gold(
         database="open_data",
-        table_name="aws_meteo",
+        table_name="s3_power_data",
         schema_source="silver_opendata",
         schema_destination="gold_opendata",
     )

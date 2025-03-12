@@ -6,7 +6,7 @@ Base = declarative_base()
 
 
 class PowerData(Base):
-    __tablename__ = "meteo_with_referential"
+    __tablename__ = "s3_power_data_final"
     __table_args__ = {"schema": "gold_opendata"}
     id = Column(Integer, primary_key=True, autoincrement=True)
     lon_x = Column(Float, primary_key=False)

@@ -9,8 +9,7 @@ from src.gd_nasa_pipeline.bronze.extract_data import (
     load_data_to_postgres,
     load_metadata,
 )
-
-from gd_nasa_pipeline.utils.postgres_handler import PostgresHandler
+from src.gd_nasa_pipeline.utils.postgres_handler import PostgresHandler
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +41,7 @@ def test_db_loader():
     output = load_data_to_postgres(
         database_name="open_data",
         schema_name="bronze_opendata",
-        table_name="aws_meteo",
+        table_name="s3_power_data",
     )
     logger.info("Loading output: %s", output)
     assert output == 0

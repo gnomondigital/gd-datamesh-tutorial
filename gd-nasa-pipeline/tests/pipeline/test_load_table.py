@@ -5,7 +5,7 @@ from src.gd_nasa_pipeline.utils.aws_handler import (
 )
 import pandas as pd
 
-from gd_nasa_pipeline.utils.postgres_handler import PostgresHandler
+from src.gd_nasa_pipeline.utils.postgres_handler import PostgresHandler
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -24,7 +24,7 @@ def test_db_loader():
         dataset=df,
         database_name="open_data",
         schema_name="bronze_opendata",
-        table_name="aws_meteo",
+        table_name="s3_power_data",
     )
     logger.info("Loading output: %s", output)
     assert output == 0

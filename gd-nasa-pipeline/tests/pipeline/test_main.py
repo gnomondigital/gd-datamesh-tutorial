@@ -2,7 +2,7 @@ import logging
 
 from click.testing import CliRunner
 
-from gd_nasa_pipeline.main import run
+from src.gd_nasa_pipeline.main import run
 
 
 logger = logging.getLogger(__name__)
@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 def test_run_with_valid_arguments():
     runner = CliRunner()
     result = runner.invoke(run, ["--view", "bronze", "--table_name",
-                                 "s3_meteo", "--schema_name",
+                                 "s3_power_data", "--schema_name",
                                  "bronze_opendata", "--db_name",
                                  "open_data"])
 

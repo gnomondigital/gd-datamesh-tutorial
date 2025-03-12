@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 
-class MeteoService:
+class PowerDataService:
     """contains all engine methods"""
 
     def sanitize_dict(self, data):

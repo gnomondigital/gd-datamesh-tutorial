@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 
 @click.command()
 @click.option("--view", required=True, type=str)
-@click.option("--table_name", default="s3_meteo", required=True, type=str)
+@click.option("--table_name", default="s3_power_data", required=True, type=str)
 @click.option("--schema_name", default="bronze_opendata",
               required=True, type=str)
 @click.option("--db_name", default="open_data", required=True, type=str)
@@ -38,7 +38,7 @@ def handle_bronze(view: str,
                   schema_name: str,
                   db_name: str) -> None:
     """Handle Bronze view."""
-    if table_name == "s3_meteo":
+    if table_name == "s3_power_data":
         load_data_to_postgres(
             database_name=db_name,
             schema_name=schema_name,
@@ -59,7 +59,7 @@ def handle_silver(view: str,
                   schema_name: str,
                   db_name: str) -> None:
     """Handle Silver view."""
-    if table_name == "s3_meteo":
+    if table_name == "s3_power_data":
         migrate_table_to_silver(
             database=db_name,
             table_name=table_name,
@@ -81,8 +81,8 @@ def handle_gold(db_name: str) -> None:
     """Handle Gold view."""
     migrate_table_to_gold(
         database=db_name,
-        table_name="meteo_with_referential",
-        table_name_data="s3_meteo",
+        table_name="s3_power_data_final",
+        table_name_data="s3_power_data",
         table_name_ref="geo_referential",
         schema_source="silver_opendata",
         schema_destination="gold_opendata",
