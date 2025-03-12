@@ -1,31 +1,28 @@
-# Data Mesh on GCP
+# Data Mesh Project: [Your Project Name Here]
 
-## Introduction
-Data Mesh is a new paradigm in data architecture that shifts from centralized data lakes and warehouses to a decentralized approach. It treats data as a product and assigns ownership to domain-specific teams, enabling scalable and agile data management.
+This project implements a data mesh architecture to enable decentralized, domain-driven data ownership and access.
 
-## Key Concepts
+## What is a Data Mesh?
 
-### Domain-Oriented Decentralized Data Ownership
-Each domain team is responsible for their own data, ensuring that the data is managed by those who understand it best.
+A data mesh is a decentralized architectural paradigm that treats data as a product. It emphasizes domain ownership, self-serve data infrastructure, and federated governance. This approach aims to address the limitations of centralized data lakes and warehouses in complex, rapidly evolving organizations.
 
-### Data as a Product
-Data is treated as a product with its own lifecycle, including development, deployment, and maintenance. This approach ensures high-quality, reliable data.
+## Key Features
 
-### Self-Serve Data Infrastructure
-A self-serve data infrastructure provides the necessary tools and platforms for domain teams to manage their data products independently.
+* **Domain-Oriented Decentralized Data Ownership:** Each domain owns and manages its data products, ensuring data quality and relevance.
+* **Data as a Product:** Data is treated as a product with defined interfaces, discoverability, and quality standards.
+* **Self-Serve Data Infrastructure as a Platform:** A platform provides the necessary tools and services for domains to manage their data products.
+* **Federated Computational Governance:** A federated governance model ensures interoperability and compliance across domains.
 
-### Federated Computational Governance
-Governance is implemented in a federated manner, allowing for global policies while enabling domain-specific flexibility.
+## Important Links and Resources
 
-## Benefits of Data Mesh
-- **Scalability**: Decentralized ownership allows for scalable data management.
-- **Agility**: Domain teams can quickly adapt to changes and innovate.
-- **Quality**: Data as a product ensures high-quality data through dedicated ownership and lifecycle management.
+* **Data Mesh Principles and Logical Architecture** by Zhamak Dehghani: [https://martinfowler.com/articles/data-mesh-principles.html](https://martinfowler.com/articles/data-mesh-principles.html)
+* **Data Mesh Learning Resources**: [https://www.datamesh-architecture.com/](https://www.datamesh-architecture.com/)
 
-## Implementing Data Mesh on GCP
-Google Cloud Platform (GCP) provides a robust set of tools and services to implement a Data Mesh architecture, including BigQuery, Dataflow, and Kubernetes.
+## My Medium Article
 
-For a detailed guide on implementing Data Mesh on GCP, refer to the [article](https://medium.com/gnomondigital/data-mesh-on-gcp-from-operational-data-to-data-product-deployment-173e43e06b68).
+* **Start a project using data mesh** [https://medium.com/gnomondigital/data-mesh-on-gcp-from-operational-data-to-data-product-deployment-173e43e06b68]
 
-## Conclusion
-Data Mesh represents a significant shift in data architecture, promoting decentralized ownership, high-quality data products, and scalable data management. GCP offers the necessary tools to successfully implement this paradigm.
+
+## Contributing
+
+Contributions are welcome
