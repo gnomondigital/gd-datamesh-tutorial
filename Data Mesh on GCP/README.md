@@ -26,3 +26,9 @@ A data mesh is a decentralized architectural paradigm that treats data as a prod
 ## Contributing
 
 Contributions are welcome
+
+## Connect with Us
+
+- [LinkedIn](https://www.linkedin.com/company/gnomon-digital)
+- [Medium](https://medium.com/gnomondigital)
+- [Official Website](https://www.gnomondigital.com)
