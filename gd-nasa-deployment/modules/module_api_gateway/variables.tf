@@ -10,7 +10,7 @@ variable "region" {
 variable "project_id" {
   description = "name of GCP project to deploy services into"
   type        = string
-  default     = "gd-gcp-datamesh-qa"
+  default     = "gnomondigital-ai-platform-dev"
 }
 
 variable "api_prefix" {

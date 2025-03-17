@@ -4,7 +4,7 @@
 variable "project_id" {
   type        = string
   description = "GCP project name"
-  default     = "gd-gcp-datamesh-qa"
+  default     = "gnomondigital-ai-platform-dev"
 }
 
 variable "project_id_bq" {

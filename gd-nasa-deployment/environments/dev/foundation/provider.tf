@@ -12,12 +12,10 @@ provider "google-beta" {
 }
 
 terraform {
-  required_version = ">=1.5.3"
   backend "gcs" {
-    bucket = "gd-nasa-api-mvp"
-    prefix = "data-platform/api-gateway/foundation"
+    bucket = "gd-gcp-datamesh-dev"
+    prefix = "data-platform/api-gateway/omniweb-api"
   }
-
 }
 #-------------------------------------------------------------------------------
 #                              --- END ---

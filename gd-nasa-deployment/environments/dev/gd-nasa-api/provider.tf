@@ -12,9 +12,8 @@ provider "google-beta" {
 }
 
 terraform {
-  required_version = ">=1.5.3"
   backend "gcs" {
-    bucket = "gd-gcp-datamesh-qa"
+    bucket = "gd-gcp-datamesh-dev"
     prefix = "data-platform/api-gateway/omniweb-api"
   }
 

@@ -5,9 +5,9 @@
 # INPUT IS OPENAPI.YAML OF API
 #-------------------------------------------------------------------------------
 module "cloud_run" {
-  source       = "../../../modules/cloud-run"
+  source       = "../../../modules/module_cloud_run"
   region       = var.region
-  image_name   = "${var.image_name}:${var.image_tag}"
+  image_name   = "europe-docker.pkg.dev/${var.project_id}/${var.repository}/${var.image_name}:${var.image_tag}"
   api_name     = "gd-nasa-api"
   memory_limit = "4Gi"
   cpu_limit    = "1.0"
@@ -16,7 +16,7 @@ module "cloud_run" {
 }
 
 module "api_gateway" {
-  source         = "../../../modules/api-gateway"
+  source         = "../../../modules/module_api_gateway"
   region         = var.region
   project_id     = var.project_id
   api_prefix     = "gd-nasa-api"
@@ -26,6 +26,8 @@ module "api_gateway" {
   api_gateway_sa = data.terraform_remote_state.foundation.outputs.api_gateway_sa
   depends_on     = [module.cloud_run]
 }
+
+
 #-------------------------------------------------------------------------------
 #                              --- END ---
 #-------------------------------------------------------------------------------

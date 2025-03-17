@@ -4,7 +4,7 @@
 variable "project_id" {
   type        = string
   description = "GCP project name"
-  default     = "gd-gcp-datamesh-qa"
+  default     = "gnomondigital-ai-platform-dev"
 }
 
 variable "region" {
@@ -21,6 +21,10 @@ variable "image_name" {
 variable "image_tag" {
   type        = string
   description = "Docker image tag to be deployed on cloud run"
+}
+variable "repository" {
+  type        = string
+  description = "Docker repository to be deployed on cloud run"
 }
 #-------------------------------------------------------------------------------
 #                              --- END ---

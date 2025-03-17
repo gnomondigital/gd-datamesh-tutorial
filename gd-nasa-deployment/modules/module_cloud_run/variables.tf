@@ -40,6 +40,12 @@ variable "api_run_sa" {
   description = "Service account name for cloud run"
   type        = string
 }
+variable "project_id" {
+  description = "Name of GCP project to deploy services into"
+  type        = string
+  default     = "gnomondigital-ai-platform-dev"
+
+}
 #-------------------------------------------------------------------------------
 #                              --- END ---
 #-------------------------------------------------------------------------------
